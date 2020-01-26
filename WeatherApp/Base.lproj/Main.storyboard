@@ -10,7 +10,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="wheatherApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="WeatherApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -54,6 +54,17 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="e96-CK-Raw">
+                                        <rect key="frame" x="118" y="276" width="178" height="32"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <segments>
+                                            <segment title="Цельсия"/>
+                                            <segment title="Фаренгейт"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="segmentControlAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="lU7-k0-iQi"/>
+                                        </connections>
+                                    </segmentedControl>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
@@ -71,6 +82,7 @@
                         <outlet property="descriptionLabel" destination="SOj-jY-yh0" id="gNK-Xg-Pwr"/>
                         <outlet property="dimView" destination="mV0-Dj-qfb" id="zpp-fS-X8c"/>
                         <outlet property="feelsLikeLabel" destination="CKN-dd-hCV" id="gQB-kU-nHz"/>
+                        <outlet property="segmentControl" destination="e96-CK-Raw" id="8Lu-it-uPs"/>
                         <outlet property="tempLabel" destination="Ebr-MQ-MeM" id="kpf-wY-j6k"/>
                         <outlet property="tempRangeLabel" destination="pra-gf-32p" id="wek-1f-BQq"/>
                     </connections>
@@ -82,7 +94,7 @@
         <!--Map View Controller-->
         <scene sceneID="RMV-3G-AGw">
             <objects>
-                <viewController storyboardIdentifier="MapViewController" id="zbQ-kq-9fZ" customClass="MapViewController" customModule="wheatherApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MapViewController" id="zbQ-kq-9fZ" customClass="MapViewController" customModule="WeatherApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="n5C-Sh-p2F" customClass="GMSMapView">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
